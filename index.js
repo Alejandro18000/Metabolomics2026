@@ -683,8 +683,8 @@ function startChromatogramScanAnimation() {
     // Scan time limits (corresponding to peak regions)
     let tVal = 7.5;
     const tEnd = 21.5;
-    const step = 0.08;
-    const speedMs = 45; // ~22 FPS for smooth scanning
+    const step = 0.035;
+    const speedMs = 70; // Slower interval for elegant scanning
     
     hoverLine.classList.remove('hidden');
     tooltip.classList.remove('hidden');
@@ -814,7 +814,7 @@ function startFlowchartSimulation() {
                 }
             }, delay);
             flowchartSimTimeouts.push(t);
-            delay += durationMs + 200; // movement duration + pause
+            delay += durationMs + 800; // Increased pause to 800ms
         }
         
         // 1. Start at Step 1 (show particle)
@@ -827,10 +827,10 @@ function startFlowchartSimulation() {
         flowchartSimTimeouts.push(t1);
         
         // 2. Move to Step 2
-        moveTo(step2, 500, 1, 2);
+        moveTo(step2, 1000, 1, 2);
         
         // 3. Move to Step 3
-        moveTo(step3, 500, 1, 3);
+        moveTo(step3, 1000, 1, 3);
         
         // Branch to Diamond 2
         const t2 = setTimeout(() => {
@@ -842,10 +842,10 @@ function startFlowchartSimulation() {
         loopCounter++;
         if (loopCounter % 2 === 0) {
             // Loop back: step 3 -> loopPath[0] -> loopPath[1] -> loopPath[2] -> loopPath[3]
-            moveTo(loopPath[0], 350, 1, 0); // go right, clear highlight
-            moveTo(loopPath[1], 450, 1, 0); // go up
-            moveTo(loopPath[2], 350, 1, 2); // go left to enter Step 2
-            moveTo(loopPath[3], 500, 1, 3); // go down to Step 3
+            moveTo(loopPath[0], 700, 1, 0); // go right, clear highlight
+            moveTo(loopPath[1], 900, 1, 0); // go up
+            moveTo(loopPath[2], 700, 1, 2); // go left to enter Step 2
+            moveTo(loopPath[3], 1000, 1, 3); // go down to Step 3
             
             // Branch to Diamond 2 again on second visit
             const t2_2 = setTimeout(() => {
@@ -855,7 +855,7 @@ function startFlowchartSimulation() {
         }
         
         // 4. Move to Step 4
-        moveTo(step4, 500, 1, 4);
+        moveTo(step4, 1000, 1, 4);
         
         // Branch to Diamond 3
         const t3 = setTimeout(() => {
@@ -864,7 +864,7 @@ function startFlowchartSimulation() {
         flowchartSimTimeouts.push(t3);
         
         // 5. Move to Step 5
-        moveTo(step5, 500, 1, 5);
+        moveTo(step5, 1000, 1, 5);
         
         // Branch to Diamond 4 (bracket top)
         const t4 = setTimeout(() => {
@@ -873,7 +873,7 @@ function startFlowchartSimulation() {
         flowchartSimTimeouts.push(t4);
         
         // 6. Move to Step 6
-        moveTo(step6, 500, 1, 6);
+        moveTo(step6, 1000, 1, 6);
         
         // Branch to Diamond 4 (bracket bottom)
         const t5 = setTimeout(() => {
@@ -882,7 +882,7 @@ function startFlowchartSimulation() {
         flowchartSimTimeouts.push(t5);
         
         // 7. Move to Step 7
-        moveTo(step7, 500, 1, 7);
+        moveTo(step7, 1000, 1, 7);
         
         // Fade out at end
         moveTo(step7, 100, 0, 0);
@@ -912,7 +912,7 @@ function startFlowchartSimulation() {
         branchParticle.style.left = `${startPt.x}%`;
         branchParticle.style.top = `${startPt.y}%`;
         branchParticle.style.opacity = '1';
-        branchParticle.style.transition = 'left 500ms ease-out, top 500ms ease-out, opacity 500ms ease-out';
+        branchParticle.style.transition = 'left 1000ms ease-out, top 1000ms ease-out, opacity 1000ms ease-out';
         
         wrapper.appendChild(branchParticle);
         
@@ -926,7 +926,7 @@ function startFlowchartSimulation() {
         // Clean up
         setTimeout(() => {
             branchParticle.remove();
-        }, 600);
+        }, 1100);
     }
     
     // Kick off first run
