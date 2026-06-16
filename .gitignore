@@ -1,0 +1,10 @@
+# Ignore everything by default
+*
+
+# Allow these specific presentation files and assets
+!index.html
+!index.css
+!index.js
+!.gitignore
+!media/
+!media/**
