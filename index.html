@@ -23,9 +23,8 @@
     <!-- Presentation Container -->
     <div id="presentation-container">
         <!-- Floating brand badge (PeakMeister Logo) -->
-        <div class="floating-brand-badge">
+        <div class="floating-brand-badge glass thin">
             <img src="media/logo de peakmeister .jpeg" alt="PeakMeister Logo" class="floating-brand-logo">
-            <span class="floating-brand-text">PeakMeister</span>
         </div>
 
         <!-- SLIDE 1: Workshop Introduction -->
@@ -46,38 +45,9 @@
         <section class="slide" id="slide-2" data-slide-index="2">
             <div class="slide-grid-2">
                 <div class="slide-col centered">
-                    <!-- SVG PeakMeister Hex Logo -->
-                    <div class="hex-logo-wrapper">
-                        <svg class="hex-logo" viewBox="0 0 120 104" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Hexagon border -->
-                            <polygon points="60,2 118,31 118,89 60,102 2,89 2,31" class="hex-border"/>
-                            <!-- Hexagon fill -->
-                            <polygon points="60,4 116,32 116,88 60,100 4,88 4,32" class="hex-fill"/>
-                            
-                            <!-- PEAKMEISTER Text -->
-                            <text x="60" y="45" class="hex-text" text-anchor="middle">PEAKMEISTER</text>
-                            
-                            <!-- Capillary indicator -->
-                            <g transform="translate(15, 48)">
-                                <line x1="0" y1="5" x2="90" y2="5" class="capillary-tube"/>
-                                <line x1="5" y1="0" x2="5" y2="10" class="capillary-strut"/>
-                                <line x1="13" y1="0" x2="13" y2="10" class="capillary-strut"/>
-                                <line x1="21" y1="0" x2="21" y2="10" class="capillary-strut"/>
-                                <line x1="29" y1="0" x2="29" y2="10" class="capillary-strut"/>
-                                <line x1="37" y1="0" x2="37" y2="10" class="capillary-strut"/>
-                                <line x1="45" y1="0" x2="45" y2="10" class="capillary-strut"/>
-                                <line x1="53" y1="0" x2="53" y2="10" class="capillary-strut"/>
-                                <line x1="61" y1="0" x2="61" y2="10" class="capillary-strut"/>
-                                <line x1="69" y1="0" x2="69" y2="10" class="capillary-strut"/>
-                                <line x1="77" y1="0" x2="77" y2="10" class="capillary-strut"/>
-                                <line x1="85" y1="0" x2="85" y2="10" class="capillary-strut"/>
-                            </g>
-                            <text x="18" y="52" class="polarity-symbol">+</text>
-                            <text x="100" y="52" class="polarity-symbol">-</text>
-                            
-                            <!-- Chromatogram line -->
-                            <path d="M 10 90 L 25 90 Q 30 90 33 70 T 36 60 T 39 90 L 48 90 Q 52 90 55 77 T 58 70 T 61 90 L 70 90 Q 73 90 75 80 T 77 72 T 80 90 L 85 90 Q 88 90 90 85 T 92 82 T 95 90 L 110 90" class="hex-chromatogram"/>
-                        </svg>
+                    <!-- Official PeakMeister Logo Card -->
+                    <div class="brand-logo-card glass regular animate-on-active" style="padding: 24px; border-radius: 24px; display: flex; justify-content: center; align-items: center; max-width: 380px; width: 100%; box-shadow: var(--card-shadow); border: 1px solid var(--border-color-thin);">
+                        <img src="media/logo de peakmeister .jpeg" alt="PeakMeister Logo" style="width: 100%; height: auto; border-radius: 16px; border: 1.5px solid var(--border-color-thin); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);">
                     </div>
                 </div>
                 <div class="slide-col centered-left">
@@ -605,11 +575,11 @@
                             </div>
                             <div class="chart-canvas-container" id="chart-is1-container">
                                 <div class="chart-title-tag">m/z 113.1640 Choline-d9 (IS1)</div>
-                                <svg class="chrom-svg" id="svg-is1" viewBox="0 0 800 120">
-                                    <line x1="50" y1="100" x2="780" y2="100" class="axis-line"/>
+                                <svg class="chrom-svg" id="svg-is1" viewBox="0 0 800 140">
+                                    <line x1="50" y1="120" x2="780" y2="120" class="axis-line"/>
                                     <!-- Align markers -->
-                                    <line x1="90" y1="10" x2="90" y2="100" class="marker-red"/>
-                                    <line x1="120" y1="10" x2="120" y2="100" class="marker-blue"/>
+                                    <line x1="90" y1="10" x2="90" y2="120" class="marker-red"/>
+                                    <line x1="120" y1="10" x2="120" y2="120" class="marker-blue"/>
                                 </svg>
                             </div>
                         </div>
@@ -623,10 +593,10 @@
                             </div>
                             <div class="chart-canvas-container" id="chart-met-container">
                                 <div class="chart-title-tag">m/z 156.0773 Histidine (Metabolite)</div>
-                                <svg class="chrom-svg" id="svg-met" viewBox="0 0 800 120">
-                                    <line x1="50" y1="100" x2="780" y2="100" class="axis-line"/>
-                                    <line x1="90" y1="10" x2="90" y2="100" class="marker-red"/>
-                                    <line x1="120" y1="10" x2="120" y2="100" class="marker-blue"/>
+                                <svg class="chrom-svg" id="svg-met" viewBox="0 0 800 140">
+                                    <line x1="50" y1="120" x2="780" y2="120" class="axis-line"/>
+                                    <line x1="90" y1="10" x2="90" y2="120" class="marker-red"/>
+                                    <line x1="120" y1="10" x2="120" y2="120" class="marker-blue"/>
                                 </svg>
                             </div>
                         </div>
@@ -640,10 +610,10 @@
                             </div>
                             <div class="chart-canvas-container" id="chart-is2-container">
                                 <div class="chart-title-tag">m/z 110.1088 GABA-d6 (IS2)</div>
-                                <svg class="chrom-svg" id="svg-is2" viewBox="0 0 800 120">
-                                    <line x1="50" y1="100" x2="780" y2="100" class="axis-line"/>
-                                    <line x1="90" y1="10" x2="90" y2="100" class="marker-red"/>
-                                    <line x1="120" y1="10" x2="120" y2="100" class="marker-blue"/>
+                                <svg class="chrom-svg" id="svg-is2" viewBox="0 0 800 140">
+                                    <line x1="50" y1="120" x2="780" y2="120" class="axis-line"/>
+                                    <line x1="90" y1="10" x2="90" y2="120" class="marker-red"/>
+                                    <line x1="120" y1="10" x2="120" y2="120" class="marker-blue"/>
                                 </svg>
                             </div>
                         </div>
@@ -653,12 +623,14 @@
                     <div class="x-axis-row">
                         <span>Migration Time (Minutes)</span>
                         <div class="ticks">
-                            <span style="left: 6.25%">5</span>
-                            <span style="left: 22.9%">10</span>
-                            <span style="left: 39.5%">15</span>
-                            <span style="left: 56.2%">20</span>
-                            <span style="left: 72.8%">25</span>
-                            <span style="left: 89.5%">30</span>
+                            <span style="left: 11.76%">8</span>
+                            <span style="left: 23.53%">10</span>
+                            <span style="left: 35.29%">12</span>
+                            <span style="left: 47.06%">14</span>
+                            <span style="left: 58.82%">16</span>
+                            <span style="left: 70.59%">18</span>
+                            <span style="left: 82.35%">20</span>
+                            <span style="left: 94.12%">22</span>
                         </div>
                     </div>
                 </div>
@@ -669,7 +641,7 @@
                     <!-- Formula widget -->
                     <div class="formula-card glass regular">
                         <h4>Migration Time Index</h4>
-                        <p class="small">Relative correction of migration drift in segment <strong id="active-segment-display">3</strong>:</p>
+                        <p class="small">Relative correction of migration drift in injection <strong id="active-injection-display">3</strong>:</p>
                         
                         <div class="math-formula">
                             <div class="mti-label">MTI =</div>

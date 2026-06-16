@@ -1440,7 +1440,7 @@ body.dark-mode .panel-subtitle {
     display: grid;
     grid-template-columns: 55px 1fr;
     gap: 5px;
-    height: 120px;
+    height: 150px;
 }
 
 .chart-y-axis {
@@ -2378,29 +2378,29 @@ body.dark-mode .drawer-item.active-item {
    ========================================================================== */
 .floating-brand-badge {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 25px;
+    right: 25px;
     z-index: 100;
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 10px 20px;
-    border-radius: 26px;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
     background: var(--card-bg-thick);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--border-color-thin);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    border: 1.5px solid var(--border-color-thin);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
     pointer-events: none;
     animation: brandPulse 3.5s ease-in-out infinite alternate;
 }
 
 .floating-brand-logo {
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1.5px solid var(--border-color);
+    border: 1.5px solid var(--border-color-thin);
 }
 
 .floating-brand-text {

@@ -68,6 +68,16 @@ function showSlide(index) {
         }
     }
     
+    if (currentSlideIndex === 11) {
+        if (typeof startChromatogramScanAnimation === 'function') {
+            startChromatogramScanAnimation();
+        }
+    } else {
+        if (typeof stopChromatogramScanAnimation === 'function') {
+            stopChromatogramScanAnimation();
+        }
+    }
+    
     // Update HUD indicator
     updateHUD();
     
@@ -343,6 +353,9 @@ function initWorkflowFlowchart() {
 
 // --- Slide 16 Widget: Interactive Stacked Chromatograms ---
 
+let chromScanInterval = null;
+let chromScanActive = false;
+
 // 13 MSI segments parameters: Migration Times (MT) in minutes
 const msiSegments = [
     { id: 1, is1: 8.24, met: 8.44, is2: 9.08 },
@@ -362,13 +375,13 @@ const msiSegments = [
 
 // SVG Dimension mapping parameters
 const svgWidth = 800;
-const svgHeight = 1200; // viewBox 800x120
-const tMin = 5;
-const tMax = 35;
+const svgHeight = 140; // viewBox 800x140
+const tMin = 6;
+const tMax = 23;
 const xStart = 50;
 const xEnd = 780;
-const yBaseline = 100;
-const yPeakHeightMax = 85;
+const yBaseline = 120;
+const yPeakHeightMax = 95;
 
 function timeToX(t) {
     return xStart + ((t - tMin) / (tMax - tMin)) * (xEnd - xStart);
@@ -526,7 +539,7 @@ function initChromatograms() {
         const addPeakText = (svg, xVal, text) => {
             const txt = document.createElementNS("http://www.w3.org/2000/svg", "text");
             txt.setAttribute('x', xVal);
-            txt.setAttribute('y', 40); // slightly above peak
+            txt.setAttribute('y', 16); // elevated above peak
             txt.setAttribute('class', `peak-num-label seg-${seg.id}`);
             txt.setAttribute('text-anchor', 'middle');
             txt.setAttribute('font-size', '10px');
@@ -561,6 +574,7 @@ function initChromatograms() {
     selectSegment(3);
     
     chartsPanel.addEventListener('mousemove', (e) => {
+        stopChromatogramScanAnimation(); // stop automatic scan immediately
         const panelRect = chartsPanel.getBoundingClientRect();
         const containerRect = document.querySelector('.chromatogram-container').getBoundingClientRect();
         
@@ -601,7 +615,7 @@ function initChromatograms() {
         tooltip.style.left = `${clientX - slideRect.left + 15}px`;
         tooltip.style.top = `${e.clientY - slideRect.top - 20}px`;
         tooltip.innerHTML = `
-            <strong>Segment ${closestSeg.id}</strong><br/>
+            <strong>Injection ${closestSeg.id}</strong><br/>
             MT<sub>Met</sub>: ${closestSeg.met.toFixed(2)} min<br/>
             MT<sub>IS1</sub>: ${closestSeg.is1.toFixed(2)} min<br/>
             MT<sub>IS2</sub>: ${closestSeg.is2.toFixed(2)} min
@@ -612,7 +626,7 @@ function initChromatograms() {
     chartsPanel.addEventListener('mouseleave', () => {
         hoverLine.classList.add('hidden');
         tooltip.classList.add('hidden');
-        // Fall back to default selection segment 3
+        // Fall back to default selection injection 3
         selectSegment(3);
     });
 }
@@ -628,8 +642,9 @@ function selectSegment(id) {
         path.classList.add('highlighted');
     });
     
-    // 3. Update active segment texts inside formulas
-    document.getElementById('active-segment-display').textContent = id;
+    // 3. Update active injection texts inside formulas
+    const displayEl = document.getElementById('active-injection-display') || document.getElementById('active-segment-display');
+    if (displayEl) displayEl.textContent = id;
     
     // Get values
     const segment = msiSegments.find(s => s.id === id);
@@ -648,6 +663,86 @@ function selectSegment(id) {
     const mti = num / den;
     
     document.getElementById('val-result').textContent = mti.toFixed(4);
+}
+
+function startChromatogramScanAnimation() {
+    stopChromatogramScanAnimation(); // reset previous loop
+    
+    const chartsPanel = document.querySelector('.charts-panel');
+    const hoverLine = document.getElementById('chart-hover-line');
+    const tooltip = document.getElementById('chart-hover-tooltip');
+    const slide11 = document.getElementById('slide-11');
+    
+    if (!chartsPanel || !hoverLine || !tooltip || !slide11) return;
+    
+    const container = document.querySelector('.chromatogram-container');
+    if (!container) return;
+    
+    chromScanActive = true;
+    
+    // Scan time limits (corresponding to peak regions)
+    let tVal = 7.5;
+    const tEnd = 21.5;
+    const step = 0.08;
+    const speedMs = 45; // ~22 FPS for smooth scanning
+    
+    hoverLine.classList.remove('hidden');
+    tooltip.classList.remove('hidden');
+    
+    chromScanInterval = setInterval(() => {
+        if (!chromScanActive) return;
+        
+        tVal += step;
+        if (tVal > tEnd) {
+            tVal = 7.5; // loop back
+        }
+        
+        const containerRect = container.getBoundingClientRect();
+        const slideRect = slide11.getBoundingClientRect();
+        
+        // Calculate coordinate relative to slide container
+        const xSvg = timeToX(tVal);
+        const xPct = xSvg / 800;
+        const xPixels = xPct * containerRect.width;
+        const clientX = containerRect.left + xPixels;
+        
+        // Move hover line
+        hoverLine.style.left = `${clientX - slideRect.left}px`;
+        hoverLine.classList.remove('hidden');
+        
+        // Find closest injection
+        let closestSeg = msiSegments[0];
+        let minDiff = Math.abs(tVal - closestSeg.met);
+        for (let i = 1; i < msiSegments.length; i++) {
+            const diff = Math.abs(tVal - msiSegments[i].met);
+            if (diff < minDiff) {
+                minDiff = diff;
+                closestSeg = msiSegments[i];
+            }
+        }
+        
+        // Update selection highlights and formula values
+        selectSegment(closestSeg.id);
+        
+        // Position tooltip
+        tooltip.style.left = `${clientX - slideRect.left + 15}px`;
+        tooltip.style.top = `${containerRect.top - slideRect.top + containerRect.height / 2 - 40}px`;
+        tooltip.innerHTML = `
+            <strong>Injection ${closestSeg.id}</strong><br/>
+            MT<sub>Met</sub>: ${closestSeg.met.toFixed(2)} min<br/>
+            MT<sub>IS1</sub>: ${closestSeg.is1.toFixed(2)} min<br/>
+            MT<sub>IS2</sub>: ${closestSeg.is2.toFixed(2)} min
+        `;
+        tooltip.classList.remove('hidden');
+    }, speedMs);
+}
+
+function stopChromatogramScanAnimation() {
+    chromScanActive = false;
+    if (chromScanInterval) {
+        clearInterval(chromScanInterval);
+        chromScanInterval = null;
+    }
 }
 
 // --- Flowchart Real-Time Simulation Loop ---
