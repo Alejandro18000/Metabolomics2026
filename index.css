@@ -2378,49 +2378,49 @@ body.dark-mode .drawer-item.active-item {
    ========================================================================== */
 .floating-brand-badge {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 30px;
+    right: 30px;
     z-index: 100;
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 14px;
-    border-radius: 20px;
+    gap: 12px;
+    padding: 10px 20px;
+    border-radius: 26px;
     background: var(--card-bg-thick);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--border-color-thin);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
     pointer-events: none;
     animation: brandPulse 3.5s ease-in-out infinite alternate;
 }
 
 .floating-brand-logo {
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid var(--border-color);
+    border: 1.5px solid var(--border-color);
 }
 
 .floating-brand-text {
     font-family: var(--font-heading);
-    font-size: 0.82rem;
+    font-size: 1.05rem;
     font-weight: 600;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     color: var(--label);
 }
 
 @keyframes brandPulse {
     0% {
         transform: translateY(0) scale(1);
-        box-shadow: 0 4px 15px rgba(var(--accent-blue-rgb), 0.04);
+        box-shadow: 0 4px 20px rgba(var(--accent-blue-rgb), 0.04);
         border-color: var(--border-color-thin);
     }
     100% {
-        transform: translateY(-2px) scale(1.01);
-        box-shadow: 0 8px 25px rgba(var(--accent-blue-rgb), 0.12);
-        border-color: rgba(var(--accent-blue-rgb), 0.25);
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 10px 30px rgba(var(--accent-blue-rgb), 0.15);
+        border-color: rgba(var(--accent-blue-rgb), 0.3);
     }
 }
 
