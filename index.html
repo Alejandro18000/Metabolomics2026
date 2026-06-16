@@ -22,6 +22,11 @@
 
     <!-- Presentation Container -->
     <div id="presentation-container">
+        <!-- Floating brand badge (PeakMeister Logo) -->
+        <div class="floating-brand-badge">
+            <img src="media/logo de peakmeister .jpeg" alt="PeakMeister Logo" class="floating-brand-logo">
+            <span class="floating-brand-text">PeakMeister</span>
+        </div>
 
         <!-- SLIDE 1: Workshop Introduction -->
         <section class="slide active" id="slide-1" data-slide-index="1">
@@ -287,36 +292,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 6: Shiny App Development (Video) -->
-        <section class="slide video-slide" id="slide-6" data-slide-index="6">
-            <div class="slide-content-full">
-                <div class="video-header-card glass thin">
-                    <h2 class="slide-title-overlay">PeakMeister Development & Demo</h2>
-                    <p class="slide-subtitle-overlay">Interactive application demo created by a Britz Group PhD student</p>
-                </div>
-                
-                <!-- macOS Window Mockup -->
-                <div class="mac-window glass regular">
-                    <div class="window-title-bar">
-                        <div class="window-buttons">
-                            <span class="btn-close"></span>
-                            <span class="btn-minimize"></span>
-                            <span class="btn-maximize"></span>
-                        </div>
-                        <div class="window-title">Shiny_App_Workflow.mp4</div>
-                    </div>
-                    <div class="window-body">
-                        <video class="slide-video" controls>
-                            <source src="media/media2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SLIDE 7: Step 4: Convert Data Files (ProteoWizard) -->
-        <section class="slide" id="slide-7" data-slide-index="7">
+        <!-- SLIDE 6: Step 4: Convert Data Files (ProteoWizard) -->
+        <section class="slide" id="slide-6" data-slide-index="6">
             <div class="slide-content">
                 <div class="slide-header">
                     <span class="step-badge">Step 4</span>
@@ -324,27 +301,13 @@
                 </div>
                 
                 <div class="grid-symmetric-2">
-                    <!-- ProteoWizard SVG representation -->
+                    <!-- ProteoWizard logo image -->
                     <div class="side-card glass regular centered">
-                        <div class="proteowizard-logo-container">
-                            <svg class="proteowizard-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="5" y="5" width="90" height="90" rx="10" fill="#4a2a6b" stroke="#7732a8" stroke-width="2"/>
-                                <path d="M 50 15 L 25 55 L 75 55 Z" fill="#cfab3c"/>
-                                <ellipse cx="50" cy="55" rx="30" ry="8" fill="#cfab3c"/>
-                                <path d="M 40 40 L 60 40" stroke="#4a2a6b" stroke-width="3"/>
-                                <polygon points="50,15 48,22 52,22" fill="#fff"/>
-                                <circle cx="50" cy="12" r="3" fill="#fff"/>
-                                <line x1="68" y1="28" x2="85" y2="45" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-                                <polygon points="85,45 88,42 90,46" fill="#cfab3c"/>
-                                <circle cx="20" cy="25" r="4" fill="#cfab3c"/>
-                                <circle cx="28" cy="22" r="3" fill="#fff"/>
-                                <circle cx="24" cy="32" r="2.5" fill="#a482d9"/>
-                                <circle cx="16" cy="30" r="2" fill="#fff"/>
-                                <circle cx="35" cy="28" r="3" fill="#cfab3c"/>
-                            </svg>
+                        <div class="proteowizard-logo-container" style="width: 140px; height: 140px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                            <img src="media/logo proteowizard .jpeg" alt="ProteoWizard Logo" class="proteowizard-logo-img" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 12px;">
                         </div>
-                        <h3>proteowizard</h3>
-                        <p class="small">Open-Source Proteomics Software</p>
+                        <h3>ProteoWizard</h3>
+                        <p class="small">Open-Source Proteomics Software Suite</p>
                     </div>
                     
                     <div class="bullets-container">
@@ -374,8 +337,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 8: Wizard (Video) -->
-        <section class="slide video-slide" id="slide-8" data-slide-index="8">
+        <!-- SLIDE 7: Wizard (Video) -->
+        <section class="slide video-slide" id="slide-7" data-slide-index="7">
             <div class="slide-content-full">
                 <div class="video-header-card glass thin">
                     <h2 class="slide-title-overlay">MSConvert Installation / Setup Wizard</h2>
@@ -402,8 +365,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 9: Sample File & Parameters (Video) -->
-        <section class="slide video-slide" id="slide-9" data-slide-index="9">
+        <!-- SLIDE 8: Sample File & Parameters (Video) -->
+        <section class="slide video-slide" id="slide-8" data-slide-index="8">
             <div class="slide-content-full">
                 <div class="video-header-card glass thin">
                     <h2 class="slide-title-overlay">Sample File and Parameter Configuration</h2>
@@ -422,7 +385,7 @@
                     </div>
                     <div class="window-body">
                         <video class="slide-video" controls>
-                            <source src="media/media5.mp4" type="video/mp4">
+                            <source src="media/diapositiva_11.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -430,8 +393,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 10: Installing PeakMeister and MS convert (Video) -->
-        <section class="slide video-slide" id="slide-10" data-slide-index="10">
+        <!-- SLIDE 9: Installing PeakMeister and MS convert (Video) -->
+        <section class="slide video-slide" id="slide-9" data-slide-index="9">
             <div class="slide-content-full">
                 <div class="video-header-card glass thin">
                     <h2 class="slide-title-overlay">Installing PeakMeister and MSConvert</h2>
@@ -450,7 +413,7 @@
                     </div>
                     <div class="window-body">
                         <video class="slide-video" controls>
-                            <source src="media/media7.mp4" type="video/mp4">
+                            <source src="media/diapositiva_13.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -458,250 +421,154 @@
             </div>
         </section>
 
-        <!-- SLIDE 11: Agilent MassHunter -->
-        <section class="slide" id="slide-11" data-slide-index="11">
-            <div class="slide-content">
+        <!-- SLIDE 10: Workflow Flowchart -->
+        <section class="slide" id="slide-10" data-slide-index="10">
+            <div class="slide-content centered">
                 <div class="slide-header">
-                    <div class="header-logo-title" style="display: flex; align-items: center; gap: 15px;">
-                        <div class="brand-logo-container" style="width: 32px; height: 32px; flex-shrink: 0; display: inline-block; vertical-align: middle;">
-                            <svg class="logo-svg agilent-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
-                                <defs>
-                                    <linearGradient id="agilent-grad-s11" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stop-color="#2c5aa0"/>
-                                        <stop offset="100%" stop-color="#143464"/>
-                                    </linearGradient>
-                                </defs>
-                                <rect x="44" y="44" width="12" height="12" fill="url(#agilent-grad-s11)"/>
-                                <path d="M 45 44 L 47 15 H 53 L 55 44 Z" fill="url(#agilent-grad-s11)"/>
-                                <rect x="46" y="8" width="8" height="8" fill="url(#agilent-grad-s11)"/>
-                                <path d="M 45 56 L 47 85 H 53 L 55 56 Z" fill="url(#agilent-grad-s11)"/>
-                                <rect x="46" y="84" width="8" height="8" fill="url(#agilent-grad-s11)"/>
-                                <path d="M 44 45 L 15 47 V 53 L 44 55 Z" fill="url(#agilent-grad-s11)"/>
-                                <rect x="8" y="46" width="8" height="8" fill="url(#agilent-grad-s11)"/>
-                                <path d="M 56 45 L 85 47 V 53 L 56 55 Z" fill="url(#agilent-grad-s11)"/>
-                                <rect x="84" y="46" width="8" height="8" fill="url(#agilent-grad-s11)"/>
-                                <path d="M 44 44 L 23 23 L 27 19 L 44 38 Z" fill="url(#agilent-grad-s11)" opacity="0.8"/>
-                                <rect x="18" y="18" width="6" height="6" fill="url(#agilent-grad-s11)" opacity="0.8" transform="rotate(45 21 21)"/>
-                                <path d="M 56 44 L 77 23 L 73 19 L 56 38 Z" fill="url(#agilent-grad-s11)" opacity="0.8"/>
-                                <rect x="76" y="18" width="6" height="6" fill="url(#agilent-grad-s11)" opacity="0.8" transform="rotate(45 79 21)"/>
-                                <path d="M 44 56 L 23 77 L 27 81 L 44 62 Z" fill="url(#agilent-grad-s11)" opacity="0.8"/>
-                                <rect x="18" y="76" width="6" height="6" fill="url(#agilent-grad-s11)" opacity="0.8" transform="rotate(45 21 79)"/>
-                                <path d="M 56 56 L 77 77 L 73 81 L 56 62 Z" fill="url(#agilent-grad-s11)" opacity="0.8"/>
-                                <rect x="76" y="76" width="6" height="6" fill="url(#agilent-grad-s11)" opacity="0.8" transform="rotate(45 79 79)"/>
-                            </svg>
-                        </div>
-                        <h2 class="slide-title-inline" style="margin: 0;">Agilent MassHunter Qualitative Analysis</h2>
-                    </div>
-                </div>
-                
-                <!-- Interactive screenshot area -->
-                <div class="masshunter-interactive glass regular">
-                    <img src="media/image20.png" alt="MassHunter Screenshot" class="masshunter-img">
-                    
-                    <!-- Hotspots overlays -->
-                    <div class="hotspot hs-sample" data-target="info-sample">
-                        <span class="pulse-ring"></span>
-                        <span class="hotspot-dot">i</span>
-                    </div>
-                    <div class="hotspot hs-chromatogram" data-target="info-chromatogram">
-                        <span class="pulse-ring"></span>
-                        <span class="hotspot-dot">i</span>
-                    </div>
-                    <div class="hotspot hs-spectra" data-target="info-spectra">
-                        <span class="pulse-ring"></span>
-                        <span class="hotspot-dot">i</span>
-                    </div>
-                    <div class="hotspot hs-method" data-target="info-method">
-                        <span class="pulse-ring"></span>
-                        <span class="hotspot-dot">i</span>
-                    </div>
-                    
-                    <!-- Information panels -->
-                    <div class="info-overlay glass regular" id="info-default">
-                        <h3>Interactive Interface Viewer</h3>
-                        <p>Hover over or click any information icon <strong class="color-highlight">i</strong> to explore the Agilent MassHunter workflow compartments and panels.</p>
-                    </div>
-                    <div class="info-overlay glass regular hidden" id="info-sample">
-                        <h3>Sample Table</h3>
-                        <p>Lists active raw datafiles, injection parameters, sample metadata, and reference files to be parsed.</p>
-                    </div>
-                    <div class="info-overlay glass regular hidden" id="info-chromatogram">
-                        <h3>Chromatogram Results</h3>
-                        <p>Displays total ion chromatograms (TIC) or extracted ion chromatograms (EIC) over migration/retention time. Multiple segment injection peaks are aligned here.</p>
-                    </div>
-                    <div class="info-overlay glass regular hidden" id="info-spectra">
-                        <h3>MS Spectrum Results</h3>
-                        <p>Displays the mass spectrum (m/z vs abundance) at selected retention times, enabling mass identification of metabolites.</p>
-                    </div>
-                    <div class="info-overlay glass regular hidden" id="info-method">
-                        <h3>Method Editor (Integrator)</h3>
-                        <p>Configures peak integration parameters (e.g. peak width, signal-to-noise ratio threshold, area reject, and integrator selection like Agile2).</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SLIDE 12: Workflow Flowchart -->
-        <section class="slide" id="slide-12" data-slide-index="12">
-            <div class="slide-grid-1-2">
-                <!-- Instrument image column -->
-                <div class="slide-col centered">
-                    <div class="instrument-card glass regular">
-                        <img src="media/image21.png" alt="Agilent 7100 Capillary Electrophoresis" class="instrument-img">
-                        <div class="instrument-label">
-                            <h4>Agilent 7100 CE System</h4>
-                            <p class="small">Capillary Electrophoresis Mass Spectrometry</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Flowchart column -->
-                <div class="slide-col centered-left">
                     <h2 class="slide-title">Data Pre-processing Workflow</h2>
                     <p class="subtitle">Hover over any step to view execution times and details</p>
-                    
-                    <div class="flowchart-container" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; min-height: 480px;">
-                        <div class="flowchart-wrapper" style="position: relative; height: 480px; aspect-ratio: 321 / 731;">
-                            <!-- Inline Crisp Vector Flowchart SVG -->
-                            <svg class="flowchart-svg" viewBox="0 0 321 731" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; display: block; pointer-events: none;">
-                                <defs>
-                                    <!-- Arrowhead Marker for flowchart lines -->
-                                    <marker id="flow-arrowhead" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                        <path d="M 0 1.5 L 6 5 L 0 8.5 z" fill="var(--accent-blue)"/>
-                                    </marker>
-                                    <!-- Arrowhead Marker for loop back line -->
-                                    <marker id="loop-arrowhead" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                        <path d="M 0 1.5 L 6 5 L 0 8.5 z" fill="var(--accent-purple)"/>
-                                    </marker>
-                                </defs>
+                </div>
+                
+                <div class="flowchart-container-full" style="display: flex; justify-content: center; align-items: center; width: 100%; height: calc(100% - 120px); min-height: 560px;">
+                    <div class="flowchart-wrapper" style="position: relative; height: 560px; aspect-ratio: 321 / 731;">
+                        <!-- Inline Crisp Vector Flowchart SVG -->
+                        <svg class="flowchart-svg" viewBox="0 0 321 731" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; display: block; pointer-events: none;">
+                            <defs>
+                                <!-- Arrowhead Marker for flowchart lines -->
+                                <marker id="flow-arrowhead" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path d="M 0 1.5 L 6 5 L 0 8.5 z" fill="var(--accent-blue)"/>
+                                </marker>
+                                <!-- Arrowhead Marker for loop back line -->
+                                <marker id="loop-arrowhead" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path d="M 0 1.5 L 6 5 L 0 8.5 z" fill="var(--accent-purple)"/>
+                                </marker>
+                            </defs>
 
-                                <!-- Connector Lines (Vertical) -->
-                                <line x1="90" y1="70" x2="90" y2="120" stroke="var(--accent-blue)" stroke-width="2" marker-end="url(#flow-arrowhead)" class="flow-line"/>
-                                <line x1="90" y1="180" x2="90" y2="230" stroke="var(--accent-blue)" stroke-width="2" marker-end="url(#flow-arrowhead)" class="flow-line"/>
-                                <line x1="90" y1="290" x2="90" y2="340" stroke="var(--accent-blue)" stroke-width="2" marker-end="url(#flow-arrowhead)" class="flow-line"/>
-                                <line x1="90" y1="400" x2="90" y2="450" stroke="var(--accent-blue)" stroke-width="2" marker-end="url(#flow-arrowhead)" class="flow-line"/>
-                                <line x1="90" y1="510" x2="90" y2="560" stroke="var(--accent-blue)" stroke-width="2" marker-end="url(#flow-arrowhead)" class="flow-line"/>
-                                <line x1="90" y1="620" x2="90" y2="670" stroke="var(--accent-blue)" stroke-width="2" marker-end="url(#flow-arrowhead)" class="flow-line"/>
+                            <!-- Connector Lines (Vertical) -->
+                            <line x1="90" y1="70" x2="90" y2="120" stroke="var(--accent-blue)" stroke-width="2.5" marker-end="url(#flow-arrowhead)" class="flow-line"/>
+                            <line x1="90" y1="180" x2="90" y2="230" stroke="var(--accent-blue)" stroke-width="2.5" marker-end="url(#flow-arrowhead)" class="flow-line"/>
+                            <line x1="90" y1="290" x2="90" y2="340" stroke="var(--accent-blue)" stroke-width="2.5" marker-end="url(#flow-arrowhead)" class="flow-line"/>
+                            <line x1="90" y1="400" x2="90" y2="450" stroke="var(--accent-blue)" stroke-width="2.5" marker-end="url(#flow-arrowhead)" class="flow-line"/>
+                            <line x1="90" y1="510" x2="90" y2="560" stroke="var(--accent-blue)" stroke-width="2.5" marker-end="url(#flow-arrowhead)" class="flow-line"/>
+                            <line x1="90" y1="620" x2="90" y2="670" stroke="var(--accent-blue)" stroke-width="2.5" marker-end="url(#flow-arrowhead)" class="flow-line"/>
 
-                                <!-- Loop Back Line (Step 3 -> Step 2) -->
-                                <path d="M 180 260 H 200 V 150 H 182" stroke="var(--accent-purple)" stroke-width="2" fill="none" stroke-dasharray="4" marker-end="url(#loop-arrowhead)" class="flow-line-loop"/>
+                            <!-- Loop Back Line (Step 3 -> Step 2) -->
+                            <path d="M 180 260 H 200 V 150 H 182" stroke="var(--accent-purple)" stroke-width="2.5" fill="none" stroke-dasharray="4" marker-end="url(#loop-arrowhead)" class="flow-line-loop"/>
 
-                                <!-- Dashed Horizontal Connectors to Duration Pills -->
-                                <line x1="180" y1="40" x2="240" y2="40" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
-                                <line x1="180" y1="150" x2="240" y2="150" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
-                                <line x1="180" y1="260" x2="240" y2="260" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
-                                <line x1="180" y1="370" x2="240" y2="370" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
-                                <line x1="180" y1="480" x2="240" y2="480" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
-                                <line x1="180" y1="590" x2="240" y2="590" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
-                                <line x1="180" y1="700" x2="240" y2="700" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
+                            <!-- Dashed Horizontal Connectors to Duration Pills -->
+                            <line x1="180" y1="40" x2="240" y2="40" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
+                            <line x1="180" y1="150" x2="240" y2="150" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
+                            <line x1="180" y1="260" x2="240" y2="260" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
+                            <line x1="180" y1="370" x2="240" y2="370" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
+                            <line x1="180" y1="480" x2="240" y2="480" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
+                            <line x1="180" y1="590" x2="240" y2="590" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
+                            <line x1="180" y1="700" x2="240" y2="700" stroke="var(--border-color-thick)" stroke-width="1.5" stroke-dasharray="3" class="flow-dashed-line"/>
 
-                                <!-- FLOWSTEP BOXES -->
-                                <!-- Step 1 -->
-                                <g class="flow-step-group" data-step="1">
-                                    <rect x="0" y="10" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
-                                    <text x="90" y="33" class="flow-text-num">STEP 1</text>
-                                    <text x="90" y="51" class="flow-text-label">File Conversion</text>
-                                </g>
+                            <!-- FLOWSTEP BOXES -->
+                            <!-- Step 1 -->
+                            <g class="flow-step-group" data-step="1">
+                                <rect x="0" y="10" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
+                                <text x="90" y="33" class="flow-text-num">STEP 1</text>
+                                <text x="90" y="51" class="flow-text-label">File Conversion</text>
+                            </g>
 
-                                <!-- Step 2 -->
-                                <g class="flow-step-group" data-step="2">
-                                    <rect x="0" y="120" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
-                                    <text x="90" y="143" class="flow-text-num">STEP 2</text>
-                                    <text x="90" y="161" class="flow-text-label">Set Parameters</text>
-                                </g>
+                            <!-- Step 2 -->
+                            <g class="flow-step-group" data-step="2">
+                                <rect x="0" y="120" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
+                                <text x="90" y="143" class="flow-text-num">STEP 2</text>
+                                <text x="90" y="161" class="flow-text-label">Set Parameters</text>
+                            </g>
 
-                                <!-- Step 3 -->
-                                <g class="flow-step-group" data-step="3">
-                                    <rect x="0" y="230" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
-                                    <text x="90" y="253" class="flow-text-num">STEP 3</text>
-                                    <text x="90" y="271" class="flow-text-label">Data Analysis</text>
-                                </g>
+                            <!-- Step 3 -->
+                            <g class="flow-step-group" data-step="3">
+                                <rect x="0" y="230" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
+                                <text x="90" y="253" class="flow-text-num">STEP 3</text>
+                                <text x="90" y="271" class="flow-text-label">Data Analysis</text>
+                            </g>
 
-                                <!-- Step 4 -->
-                                <g class="flow-step-group" data-step="4">
-                                    <rect x="0" y="340" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
-                                    <text x="90" y="363" class="flow-text-num">STEP 4</text>
-                                    <text x="90" y="381" class="flow-text-label">Manual Checking</text>
-                                </g>
+                            <!-- Step 4 -->
+                            <g class="flow-step-group" data-step="4">
+                                <rect x="0" y="340" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
+                                <text x="90" y="363" class="flow-text-num">STEP 4</text>
+                                <text x="90" y="381" class="flow-text-label">Manual Checking</text>
+                            </g>
 
-                                <!-- Step 5 -->
-                                <g class="flow-step-group" data-step="5">
-                                    <rect x="0" y="450" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
-                                    <text x="90" y="473" class="flow-text-num">STEP 5</text>
-                                    <text x="90" y="491" class="flow-text-label">Downstream Processing</text>
-                                </g>
+                            <!-- Step 5 -->
+                            <g class="flow-step-group" data-step="5">
+                                <rect x="0" y="450" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
+                                <text x="90" y="473" class="flow-text-num">STEP 5</text>
+                                <text x="90" y="491" class="flow-text-label">Downstream Processing</text>
+                            </g>
 
-                                <!-- Step 6 -->
-                                <g class="flow-step-group" data-step="6">
-                                    <rect x="0" y="560" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
-                                    <text x="90" y="583" class="flow-text-num">STEP 6</text>
-                                    <text x="90" y="601" class="flow-text-label">Data Review</text>
-                                </g>
+                            <!-- Step 6 -->
+                            <g class="flow-step-group" data-step="6">
+                                <rect x="0" y="560" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
+                                <text x="90" y="583" class="flow-text-num">STEP 6</text>
+                                <text x="90" y="601" class="flow-text-label">Data Review</text>
+                            </g>
 
-                                <!-- Step 7 -->
-                                <g class="flow-step-group" data-step="7">
-                                    <rect x="0" y="670" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
-                                    <text x="90" y="693" class="flow-text-num">STEP 7</text>
-                                    <text x="90" y="711" class="flow-text-label">Data Export</text>
-                                </g>
+                            <!-- Step 7 -->
+                            <g class="flow-step-group" data-step="7">
+                                <rect x="0" y="670" width="180" height="60" rx="12" ry="12" class="flow-rect"/>
+                                <text x="90" y="693" class="flow-text-num">STEP 7</text>
+                                <text x="90" y="711" class="flow-text-label">Data Export</text>
+                            </g>
 
-                                <!-- DURATION PILLS -->
-                                <!-- Pill 1 -->
-                                <g class="flow-pill-group" data-step="1">
-                                    <rect x="240" y="22" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
-                                    <text x="280" y="45" class="flow-pill-text">~30s / file</text>
-                                </g>
+                            <!-- DURATION PILLS -->
+                            <!-- Pill 1 -->
+                            <g class="flow-pill-group" data-step="1">
+                                <rect x="240" y="22" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
+                                <text x="280" y="45" class="flow-pill-text">~30s / file</text>
+                            </g>
 
-                                <!-- Pill 2 -->
-                                <g class="flow-pill-group" data-step="2">
-                                    <rect x="240" y="132" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
-                                    <text x="280" y="155" class="flow-pill-text">Immediate</text>
-                                </g>
+                            <!-- Pill 2 -->
+                            <g class="flow-pill-group" data-step="2">
+                                <rect x="240" y="132" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
+                                <text x="280" y="155" class="flow-pill-text">Immediate</text>
+                            </g>
 
-                                <!-- Pill 3 -->
-                                <g class="flow-pill-group" data-step="3">
-                                    <rect x="240" y="242" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
-                                    <text x="280" y="265" class="flow-pill-text">8-10 min</text>
-                                </g>
+                            <!-- Pill 3 -->
+                            <g class="flow-pill-group" data-step="3">
+                                <rect x="240" y="242" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
+                                <text x="280" y="265" class="flow-pill-text">8-10 min</text>
+                            </g>
 
-                                <!-- Pill 4 -->
-                                <g class="flow-pill-group" data-step="4">
-                                    <rect x="240" y="352" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
-                                    <text x="280" y="375" class="flow-pill-text">10-20 min</text>
-                                </g>
+                            <!-- Pill 4 -->
+                            <g class="flow-pill-group" data-step="4">
+                                <rect x="240" y="352" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
+                                <text x="280" y="375" class="flow-pill-text">10-20 min</text>
+                            </g>
 
-                                <!-- Pill 5 -->
-                                <g class="flow-pill-group" data-step="5">
-                                    <rect x="240" y="462" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
-                                    <text x="280" y="485" class="flow-pill-text">&lt; 5 min</text>
-                                </g>
+                            <!-- Pill 5 -->
+                            <g class="flow-pill-group" data-step="5">
+                                <rect x="240" y="462" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
+                                <text x="280" y="485" class="flow-pill-text">&lt; 5 min</text>
+                            </g>
 
-                                <!-- Pill 6 -->
-                                <g class="flow-pill-group" data-step="6">
-                                    <rect x="240" y="572" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
-                                    <text x="280" y="595" class="flow-pill-text">&lt; 5 min</text>
-                                </g>
+                            <!-- Pill 6 -->
+                            <g class="flow-pill-group" data-step="6">
+                                <rect x="240" y="572" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
+                                <text x="280" y="595" class="flow-pill-text">&lt; 5 min</text>
+                            </g>
 
-                                <!-- Pill 7 -->
-                                <g class="flow-pill-group" data-step="7">
-                                    <rect x="240" y="682" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
-                                    <text x="280" y="705" class="flow-pill-text">Immediate</text>
-                                </g>
-                            </svg>
-                            
-                            <!-- Transparent hover nodes (hotspots) -->
-                            <!-- Coordinate mapped to percentages of 321x731 -->
-                            <div class="flow-hover-node" data-step="1" data-duration="~30s per file" data-details="Conversion of raw vendor formats (.raw, .d) into open standard formats (.mz5) using MSConvert." style="position: absolute; left: 0%; top: 1.37%; width: 100%; height: 8.21%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
-                            <div class="flow-hover-node" data-step="2" data-duration="Immediate" data-details="Configure initial search criteria, peak filter tolerances, and internal standard information in R/Shiny." style="position: absolute; left: 0%; top: 16.42%; width: 100%; height: 8.21%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
-                            <div class="flow-hover-node" data-step="3" data-duration="8-10 min per file" data-details="App calculates Migration Time Index (MTI), extracts ion traces, and performs initial peak picking. Loop back to adjust parameters if needed." style="position: absolute; left: 0%; top: 31.46%; width: 100%; height: 8.21%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
-                            <div class="flow-hover-node" data-step="4" data-duration="10-20 min per file" data-details="Manual verification of integrated peaks, peak alignment corrections, and quality control checks." style="position: absolute; left: 0%; top: 46.51%; width: 100%; height: 8.21%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
-                            <div class="flow-hover-node" data-step="5" data-duration="&lt;5 min total" data-details="Perform normalization relative to internal standards, impute missing values, and structure metrics." style="position: absolute; left: 0%; top: 61.56%; width: 100%; height: 8.21%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
-                            <div class="flow-hover-node" data-step="6" data-duration="&lt;5 min total" data-details="Verify sample groups via Principal Component Analysis (PCA), monitor control charts, and check %RSD of targets." style="position: absolute; left: 0%; top: 76.61%; width: 100%; height: 8.21%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
-                            <div class="flow-hover-node" data-step="7" data-duration="Immediate" data-details="Export processed clean metrics as .csv tables and aligned visual plots as .png." style="position: absolute; left: 0%; top: 91.66%; width: 100%; height: 8.2%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
-                            
-                            <!-- Flow Particle (Glowing Dot) -->
-                            <div id="flow-particle" class="flow-particle" style="position: absolute; width: 12px; height: 12px; background-color: var(--accent-blue); border-radius: 50%; box-shadow: 0 0 8px var(--accent-blue), 0 0 16px var(--accent-blue); pointer-events: none; z-index: 5; opacity: 0; transition: left 0.4s linear, top 0.4s linear, opacity 0.3s ease;"></div>
-                        </div>
+                            <!-- Pill 7 -->
+                            <g class="flow-pill-group" data-step="7">
+                                <rect x="240" y="682" width="80" height="36" rx="10" ry="10" class="flow-pill-rect"/>
+                                <text x="280" y="705" class="flow-pill-text">Immediate</text>
+                            </g>
+                        </svg>
+                        
+                        <!-- Transparent hover nodes (hotspots) -->
+                        <div class="flow-hover-node" data-step="1" data-duration="~30s per file" data-details="Conversion of raw vendor formats (.raw, .d) into open standard formats (.mz5) using MSConvert." style="position: absolute; left: 0%; top: 1.37%; width: 100%; height: 8.21%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
+                        <div class="flow-hover-node" data-step="2" data-duration="Immediate" data-details="Configure initial search criteria, peak filter tolerances, and internal standard information in R/Shiny." style="position: absolute; left: 0%; top: 16.42%; width: 100%; height: 8.21%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
+                        <div class="flow-hover-node" data-step="3" data-duration="8-10 min per file" data-details="App calculates Migration Time Index (MTI), extracts ion traces, and performs initial peak picking. Loop back to adjust parameters if needed." style="position: absolute; left: 0%; top: 31.46%; width: 100%; height: 8.21%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
+                        <div class="flow-hover-node" data-step="4" data-duration="10-20 min per file" data-details="Manual verification of integrated peaks, peak alignment corrections, and quality control checks." style="position: absolute; left: 0%; top: 46.51%; width: 100%; height: 8.21%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
+                        <div class="flow-hover-node" data-step="5" data-duration="&lt;5 min total" data-details="Perform normalization relative to internal standards, impute missing values, and structure metrics." style="position: absolute; left: 0%; top: 61.56%; width: 100%; height: 8.21%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
+                        <div class="flow-hover-node" data-step="6" data-duration="&lt;5 min total" data-details="Verify sample groups via Principal Component Analysis (PCA), monitor control charts, and check %RSD of targets." style="position: absolute; left: 0%; top: 76.61%; width: 100%; height: 8.21%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
+                        <div class="flow-hover-node" data-step="7" data-duration="Immediate" data-details="Export processed clean metrics as .csv tables and aligned visual plots as .png." style="position: absolute; left: 0%; top: 91.66%; width: 100%; height: 8.2%; cursor: pointer; border-radius: 8px; transition: background-color 0.2s ease, border 0.2s ease;"></div>
+                        
+                        <!-- Flow Particle (Glowing Dot) -->
+                        <div id="flow-particle" class="flow-particle" style="position: absolute; width: 12px; height: 12px; background-color: var(--accent-blue); border-radius: 50%; box-shadow: 0 0 8px var(--accent-blue), 0 0 16px var(--accent-blue); pointer-events: none; z-index: 5; opacity: 0; transition: left 0.4s linear, top 0.4s linear, opacity 0.3s ease;"></div>
                     </div>
                 </div>
             </div>
@@ -716,8 +583,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 13: Stacked Chromatograms, Interactive Alignment & MTI Formula -->
-        <section class="slide" id="slide-13" data-slide-index="13">
+        <!-- SLIDE 11: Stacked Chromatograms, Interactive Alignment & MTI Formula -->
+        <section class="slide" id="slide-11" data-slide-index="11">
             <div class="chromatogram-dashboard">
                 
                 <!-- Left panel: Stacked charts -->
@@ -890,8 +757,8 @@
             <div id="chart-hover-tooltip" class="glass thick hidden">Tooltip</div>
         </section>
 
-        <!-- SLIDE 14: Launching App & Running Real Data (Video) -->
-        <section class="slide video-slide" id="slide-14" data-slide-index="14">
+        <!-- SLIDE 12: Launching App & Running Real Data (Video) -->
+        <section class="slide video-slide" id="slide-12" data-slide-index="12">
             <div class="slide-content-full">
                 <div class="video-header-card glass thin">
                     <h2 class="slide-title-overlay">Launching the App and Processing Real Data</h2>
@@ -918,8 +785,8 @@
             </div>
         </section>
 
-        <!-- SLIDE 15: Closing slide & Acknowledgements -->
-        <section class="slide" id="slide-15" data-slide-index="15">
+        <!-- SLIDE 13: Closing slide & Acknowledgements -->
+        <section class="slide" id="slide-13" data-slide-index="13">
             <div class="slide-content centered">
                 <div class="closing-badge glass thin">Thank you!</div>
                 <h1 class="hero-title font-smaller">The Britz-McKibbin Laboratory</h1>
@@ -961,7 +828,7 @@
                 <div class="hud-progress-bar-outer glass thin">
                     <div class="hud-progress-bar-inner" id="hud-progress" style="width: 6.25%"></div>
                 </div>
-                <span class="hud-slide-counter"><span id="current-slide-num">1</span> / 15</span>
+                <span class="hud-slide-counter"><span id="current-slide-num">1</span> / 13</span>
             </div>
             
             <button class="hud-btn glass thin" id="hud-next" onclick="nextSlide()">

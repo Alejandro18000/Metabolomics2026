@@ -2373,3 +2373,95 @@ body.dark-mode .drawer-item.active-item {
     width: 100%;
 }
 
+/* ==========================================================================
+   PeakMeister Floating Brand Badge
+   ========================================================================== */
+.floating-brand-badge {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--card-bg-thick);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color-thin);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+    animation: brandPulse 3.5s ease-in-out infinite alternate;
+}
+
+.floating-brand-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+
+.floating-brand-text {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--label);
+}
+
+@keyframes brandPulse {
+    0% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 4px 15px rgba(var(--accent-blue-rgb), 0.04);
+        border-color: var(--border-color-thin);
+    }
+    100% {
+        transform: translateY(-2px) scale(1.01);
+        box-shadow: 0 8px 25px rgba(var(--accent-blue-rgb), 0.12);
+        border-color: rgba(var(--accent-blue-rgb), 0.25);
+    }
+}
+
+/* ==========================================================================
+   Centered Flowchart Layout
+   ========================================================================== */
+.flowchart-container-full {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Flowchart line active flows */
+.flow-line {
+    stroke: var(--accent-blue);
+    stroke-dasharray: 8 6;
+    stroke-linecap: round;
+    animation: flowLineDash 1.5s linear infinite;
+}
+
+@keyframes flowLineDash {
+    to {
+        stroke-dashoffset: -28;
+    }
+}
+
+/* Highlighted step group inside simulation */
+.flow-step-group {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flow-step-group .flow-rect {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flow-step-group.sim-active .flow-rect {
+    fill: rgba(var(--accent-blue-rgb), 0.12) !important;
+    stroke: var(--accent-blue) !important;
+    stroke-width: 2px !important;
+    filter: drop-shadow(0 0 10px rgba(var(--accent-blue-rgb), 0.3));
+}
+

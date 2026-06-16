@@ -58,7 +58,7 @@ function showSlide(index) {
     }
     
     // Trigger slide-specific animations or widgets
-    if (currentSlideIndex === 12) {
+    if (currentSlideIndex === 10) {
         if (typeof startFlowchartSimulation === 'function') {
             startFlowchartSimulation();
         }
@@ -140,12 +140,10 @@ const slideTitles = [
     "Step 1: Download R & RStudio",
     "Initial Considerations (Video)",
     "Steps 2 & 3: GitHub Setup",
-    "Shiny App Development (Video)",
     "Step 4: Convert Data Files",
     "MSConvert Wizard (Video)",
     "Parameter Settings (Video)",
     "Full Installation (Video)",
-    "Agilent MassHunter",
     "Pre-processing Workflow",
     "Stacked Chromatograms & MTI",
     "Running Real Datafile (Video)",
@@ -296,7 +294,7 @@ function initWorkflowFlowchart() {
     const detailTitle = detailBox.querySelector('.detail-title');
     const detailDuration = detailBox.querySelector('.detail-duration');
     const detailBody = detailBox.querySelector('.detail-body');
-    const flowchartSection = document.getElementById('slide-12');
+    const flowchartSection = document.getElementById('slide-10');
     
     if (!nodes.length || !detailBox || !flowchartSection) return;
     
@@ -555,7 +553,7 @@ function initChromatograms() {
     const chartsPanel = document.querySelector('.charts-panel');
     const hoverLine = document.getElementById('chart-hover-line');
     const tooltip = document.getElementById('chart-hover-tooltip');
-    const slide13 = document.getElementById('slide-13');
+    const slide13 = document.getElementById('slide-11');
     
     if (!chartsPanel || !hoverLine || !tooltip || !slide13) return;
     
@@ -656,6 +654,17 @@ function selectSegment(id) {
 let flowchartSimInterval = null;
 let flowchartSimTimeouts = [];
 
+// Helper function to dynamically add active highlight glow to flowchart steps
+function highlightSimStep(stepNum) {
+    document.querySelectorAll('.flow-step-group').forEach(group => {
+        group.classList.remove('sim-active');
+    });
+    if (stepNum) {
+        const activeGroup = document.querySelector(`.flow-step-group[data-step="${stepNum}"]`);
+        if (activeGroup) activeGroup.classList.add('sim-active');
+    }
+}
+
 function startFlowchartSimulation() {
     // Clear any existing simulation first
     stopFlowchartSimulation();
@@ -694,23 +703,27 @@ function startFlowchartSimulation() {
         particle.style.opacity = '0';
         particle.style.left = `${step1.x}%`;
         particle.style.top = `${step1.y}%`;
+        highlightSimStep(null);
         
         let delay = 100;
         
         // Helper to schedule transitions
-        function moveTo(pt, durationMs, opacity = 1) {
+        function moveTo(pt, durationMs, opacity = 1, stepToHighlight = null) {
             const t = setTimeout(() => {
                 particle.style.transition = `left ${durationMs}ms linear, top ${durationMs}ms linear, opacity 200ms ease`;
                 particle.style.opacity = opacity.toString();
                 particle.style.left = `${pt.x}%`;
                 particle.style.top = `${pt.y}%`;
+                if (stepToHighlight !== null) {
+                    highlightSimStep(stepToHighlight);
+                }
             }, delay);
             flowchartSimTimeouts.push(t);
             delay += durationMs + 200; // movement duration + pause
         }
         
         // 1. Start at Step 1 (show particle)
-        moveTo(step1, 0, 1);
+        moveTo(step1, 0, 1, 1);
         
         // Branch to Diamond 1
         const t1 = setTimeout(() => {
@@ -719,10 +732,10 @@ function startFlowchartSimulation() {
         flowchartSimTimeouts.push(t1);
         
         // 2. Move to Step 2
-        moveTo(step2, 500);
+        moveTo(step2, 500, 1, 2);
         
         // 3. Move to Step 3
-        moveTo(step3, 500);
+        moveTo(step3, 500, 1, 3);
         
         // Branch to Diamond 2
         const t2 = setTimeout(() => {
@@ -734,10 +747,10 @@ function startFlowchartSimulation() {
         loopCounter++;
         if (loopCounter % 2 === 0) {
             // Loop back: step 3 -> loopPath[0] -> loopPath[1] -> loopPath[2] -> loopPath[3]
-            moveTo(loopPath[0], 350); // go right
-            moveTo(loopPath[1], 450); // go up
-            moveTo(loopPath[2], 350); // go left to enter Step 2
-            moveTo(loopPath[3], 500); // go down to Step 3
+            moveTo(loopPath[0], 350, 1, 0); // go right, clear highlight
+            moveTo(loopPath[1], 450, 1, 0); // go up
+            moveTo(loopPath[2], 350, 1, 2); // go left to enter Step 2
+            moveTo(loopPath[3], 500, 1, 3); // go down to Step 3
             
             // Branch to Diamond 2 again on second visit
             const t2_2 = setTimeout(() => {
@@ -747,7 +760,7 @@ function startFlowchartSimulation() {
         }
         
         // 4. Move to Step 4
-        moveTo(step4, 500);
+        moveTo(step4, 500, 1, 4);
         
         // Branch to Diamond 3
         const t3 = setTimeout(() => {
@@ -756,7 +769,7 @@ function startFlowchartSimulation() {
         flowchartSimTimeouts.push(t3);
         
         // 5. Move to Step 5
-        moveTo(step5, 500);
+        moveTo(step5, 500, 1, 5);
         
         // Branch to Diamond 4 (bracket top)
         const t4 = setTimeout(() => {
@@ -765,7 +778,7 @@ function startFlowchartSimulation() {
         flowchartSimTimeouts.push(t4);
         
         // 6. Move to Step 6
-        moveTo(step6, 500);
+        moveTo(step6, 500, 1, 6);
         
         // Branch to Diamond 4 (bracket bottom)
         const t5 = setTimeout(() => {
@@ -774,10 +787,10 @@ function startFlowchartSimulation() {
         flowchartSimTimeouts.push(t5);
         
         // 7. Move to Step 7
-        moveTo(step7, 500);
+        moveTo(step7, 500, 1, 7);
         
         // Fade out at end
-        moveTo(step7, 100, 0);
+        moveTo(step7, 100, 0, 0);
         
         // Restart loop after total delay
         const restartTimer = setTimeout(() => {
@@ -838,4 +851,7 @@ function stopFlowchartSimulation() {
     if (particle) {
         particle.style.opacity = '0';
     }
+
+    // Clean active highlights
+    highlightSimStep(null);
 }
