@@ -22,7 +22,7 @@ function setupMentimeterDemo() {
     
     if (qrImage) {
         // Genera un código QR dinámico de alta definición basado en la URL de votación
-        qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(MENTIMETER_VOTE_URL)}`;
+        qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(MENTIMETER_VOTE_URL)}`;
     }
     if (joinBtn) {
         joinBtn.href = MENTIMETER_VOTE_URL;
