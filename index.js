@@ -159,9 +159,8 @@ const slideTitles = [
     "Running the App (Video)",
     "Full Installation (Video)",
     "Pre-processing Workflow",
-    "MassHunter Visualizer",
-    "Stacked Chromatograms & MTI",
     "Running Real Datafile (Video)",
+    "Stacked Chromatograms & MTI",
     "Closing & McMaster Lab"
 ];
 
