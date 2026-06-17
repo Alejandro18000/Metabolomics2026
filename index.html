@@ -41,9 +41,9 @@
                     <div class="glass-card glass regular centered" style="padding: 24px; border-radius: 20px; width: 100%; max-width: 380px; margin-top: 15px;">
                         <p style="font-size: 0.9rem; color: var(--text-color-secondary); margin-bottom: 15px;">Scan to vote:</p>
                         <div class="qr-container glass thin" style="padding: 12px; border-radius: 12px; display: inline-block; background: white; margin-bottom: 15px;">
-                            <img src="media/image6.png" alt="Mentimeter QR Code" style="width: 140px; height: 140px; display: block;">
+                            <img id="menti-qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.menti.com" alt="Mentimeter QR Code" style="width: 140px; height: 140px; display: block;">
                         </div>
-                        <a href="https://www.menti.com/" target="_blank" class="download-btn glass thin accent" style="display: inline-block; width: 100%; text-align: center; padding: 12px; border-radius: 10px; font-weight: 600;">Join Activity</a>
+                        <a id="menti-join-btn" href="https://www.menti.com/" target="_blank" class="download-btn glass thin accent" style="display: inline-block; width: 100%; text-align: center; padding: 12px; border-radius: 10px; font-weight: 600;">Join Activity</a>
                     </div>
                 </div>
                 
@@ -60,7 +60,7 @@
                         </div>
                         <div class="window-body" style="height: calc(100% - 30px); padding: 0;">
                             <!-- Iframe embedding Mentimeter presentation results -->
-                            <iframe src="https://embed.mentimeter.com/embed/c04b8d78572b9148d21c3272d561a3ba/7d235bc6c3e7" 
+                            <iframe id="menti-results-iframe" src="https://embed.mentimeter.com/embed/c04b8d78572b9148d21c3272d561a3ba/7d235bc6c3e7" 
                                     style="width: 100%; height: 100%; border: none; border-radius: 0 0 12px 12px; background: #fff;" 
                                     allowfullscreen></iframe>
                         </div>

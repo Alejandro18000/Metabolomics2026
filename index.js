@@ -2,6 +2,11 @@
    Apple Liquid Glass UI - Presentation Engine and Interactive Widgets
    ========================================================================== */
 
+// --- Configuración de Actividad Interactiva Mentimeter ---
+// REEMPLAZA estas URLs con los enlaces de tu propia encuesta en Mentimeter:
+const MENTIMETER_VOTE_URL = "https://www.menti.com/"; // URL para participantes (puedes cambiarla por tu URL directa de votación)
+const MENTIMETER_EMBED_URL = "https://embed.mentimeter.com/embed/c04b8d78572b9148d21c3272d561a3ba/7d235bc6c3e7"; // URL de resultados (la obtienes del Embed Code)
+
 // --- Global Presentation State ---
 let currentSlideIndex = 1;
 const slides = document.querySelectorAll('.slide');
@@ -9,8 +14,27 @@ const totalSlides = slides.length;
 const progressBar = document.getElementById('hud-progress');
 const currentSlideCounter = document.getElementById('current-slide-num');
 
+// --- Setup Mentimeter Live survey variables dynamically ---
+function setupMentimeterDemo() {
+    const qrImage = document.getElementById('menti-qr-code');
+    const joinBtn = document.getElementById('menti-join-btn');
+    const resultsIframe = document.getElementById('menti-results-iframe');
+    
+    if (qrImage) {
+        // Genera un código QR dinámico de alta definición basado en la URL de votación
+        qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(MENTIMETER_VOTE_URL)}`;
+    }
+    if (joinBtn) {
+        joinBtn.href = MENTIMETER_VOTE_URL;
+    }
+    if (resultsIframe) {
+        resultsIframe.src = MENTIMETER_EMBED_URL;
+    }
+}
+
 // --- Initial Launch Settings ---
 document.addEventListener('DOMContentLoaded', () => {
+    setupMentimeterDemo();
     initPresentation();
     setupKeyboardListeners();
     setupVideoControls();
