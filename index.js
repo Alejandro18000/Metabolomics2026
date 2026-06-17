@@ -169,8 +169,8 @@ function toggleTheme() {
 
 // --- Slide Drawer Navigator ---
 const slideTitles = [
-    "Mentimeter Activity",
     "Pre-processing Intro",
+    "Mentimeter Activity",
     "PeakMeister App",
     "Step 1: Download R & RStudio",
     "Initial Considerations (Video)",
