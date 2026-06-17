@@ -58,7 +58,7 @@ function showSlide(index) {
     }
     
     // Trigger slide-specific animations or widgets
-    if (currentSlideIndex === 10) {
+    if (currentSlideIndex === 11) {
         if (typeof startFlowchartSimulation === 'function') {
             startFlowchartSimulation();
         }
@@ -68,7 +68,7 @@ function showSlide(index) {
         }
     }
     
-    if (currentSlideIndex === 11) {
+    if (currentSlideIndex === 12) {
         if (typeof startChromatogramScanAnimation === 'function') {
             startChromatogramScanAnimation();
         }
@@ -145,6 +145,7 @@ function toggleTheme() {
 
 // --- Slide Drawer Navigator ---
 const slideTitles = [
+    "Mentimeter Activity",
     "Pre-processing Intro",
     "PeakMeister App",
     "Step 1: Download R & RStudio",
@@ -304,7 +305,7 @@ function initWorkflowFlowchart() {
     const detailTitle = detailBox.querySelector('.detail-title');
     const detailDuration = detailBox.querySelector('.detail-duration');
     const detailBody = detailBox.querySelector('.detail-body');
-    const flowchartSection = document.getElementById('slide-10');
+    const flowchartSection = document.getElementById('slide-11');
     
     if (!nodes.length || !detailBox || !flowchartSection) return;
     
@@ -566,7 +567,7 @@ function initChromatograms() {
     const chartsPanel = document.querySelector('.charts-panel');
     const hoverLine = document.getElementById('chart-hover-line');
     const tooltip = document.getElementById('chart-hover-tooltip');
-    const slide13 = document.getElementById('slide-11');
+    const slide13 = document.getElementById('slide-12');
     
     if (!chartsPanel || !hoverLine || !tooltip || !slide13) return;
     
@@ -671,7 +672,7 @@ function startChromatogramScanAnimation() {
     const chartsPanel = document.querySelector('.charts-panel');
     const hoverLine = document.getElementById('chart-hover-line');
     const tooltip = document.getElementById('chart-hover-tooltip');
-    const slide11 = document.getElementById('slide-11');
+    const slide11 = document.getElementById('slide-12');
     
     if (!chartsPanel || !hoverLine || !tooltip || !slide11) return;
     

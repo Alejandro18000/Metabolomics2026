@@ -27,8 +27,50 @@
             <img src="media/logo de peakmeister .jpeg" alt="PeakMeister Logo" class="floating-brand-logo">
         </div>
 
-        <!-- SLIDE 1: Workshop Introduction -->
+                <!-- SLIDE 1: Mentimeter Interactive Icebreaker -->
         <section class="slide active" id="slide-1" data-slide-index="1">
+            <div class="slide-grid-2">
+                <!-- Left: Instructions & QR Code -->
+                <div class="slide-col centered-left">
+                    <span class="step-badge" style="background: rgba(0, 122, 255, 0.1); color: var(--accent-color);">Interactive Icebreaker</span>
+                    <h2 class="slide-title">Coffee or tea?</h2>
+                    <p class="slide-description">
+                        Scan the QR code or click the button below to participate in our live interactive survey.
+                    </p>
+                    
+                    <div class="glass-card glass regular centered" style="padding: 24px; border-radius: 20px; width: 100%; max-width: 380px; margin-top: 15px;">
+                        <p style="font-size: 0.9rem; color: var(--text-color-secondary); margin-bottom: 15px;">Scan to vote:</p>
+                        <div class="qr-container glass thin" style="padding: 12px; border-radius: 12px; display: inline-block; background: white; margin-bottom: 15px;">
+                            <img src="media/image6.png" alt="Mentimeter QR Code" style="width: 140px; height: 140px; display: block;">
+                        </div>
+                        <a href="https://www.menti.com/" target="_blank" class="download-btn glass thin accent" style="display: inline-block; width: 100%; text-align: center; padding: 12px; border-radius: 10px; font-weight: 600;">Join Activity</a>
+                    </div>
+                </div>
+                
+                <!-- Right: Live Results (Mentimeter Embed Iframe) -->
+                <div class="slide-col centered">
+                    <div class="mac-window glass regular" style="width: 100%; height: 90%; max-height: 480px; box-shadow: var(--card-shadow);">
+                        <div class="window-title-bar">
+                            <div class="window-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <div class="window-title">Mentimeter Live Results</div>
+                        </div>
+                        <div class="window-body" style="height: calc(100% - 30px); padding: 0;">
+                            <!-- Iframe embedding Mentimeter presentation results -->
+                            <iframe src="https://embed.mentimeter.com/embed/c04b8d78572b9148d21c3272d561a3ba/7d235bc6c3e7" 
+                                    style="width: 100%; height: 100%; border: none; border-radius: 0 0 12px 12px; background: #fff;" 
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: Workshop Introduction -->
+        <section class="slide" id="slide-2" data-slide-index="2">
             <div class="slide-content centered">
                 <div class="badge glass thin">Metabolomics 2026</div>
                 <h1 class="hero-title">PeakMeister Data Pre-processing</h1>
@@ -42,7 +84,7 @@
         </section>
 
         <!-- SLIDE 2: PeakMeister Logo and App Description -->
-        <section class="slide" id="slide-2" data-slide-index="2">
+        <section class="slide" id="slide-3" data-slide-index="3">
             <div class="slide-grid-2">
                 <div class="slide-col centered">
                     <!-- Official PeakMeister Logo Card -->
@@ -88,7 +130,7 @@
         </section>
 
         <!-- SLIDE 3: Step 1: Download R and R Studio -->
-        <section class="slide" id="slide-3" data-slide-index="3">
+        <section class="slide" id="slide-4" data-slide-index="4">
             <div class="slide-content">
                 <div class="slide-header">
                     <span class="step-badge">Step 1</span>
@@ -172,7 +214,7 @@
         </section>
 
         <!-- SLIDE 4: Initial Considerations (Video) -->
-        <section class="slide video-slide" id="slide-4" data-slide-index="4">
+        <section class="slide video-slide" id="slide-5" data-slide-index="5">
             <div class="slide-content-full">
                 <div class="video-header-card glass thin">
                     <h2 class="slide-title-overlay">PeakMeister Initial Considerations</h2>
@@ -200,7 +242,7 @@
         </section>
 
         <!-- SLIDE 5: Steps 2 & 3: GitHub setup -->
-        <section class="slide" id="slide-5" data-slide-index="5">
+        <section class="slide" id="slide-6" data-slide-index="6">
             <div class="slide-content">
                 <div class="slide-header" style="display: flex; align-items: center; gap: 15px;">
                     <svg class="logo-svg github-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 38px; height: 38px; fill: var(--label); flex-shrink: 0;">
@@ -263,7 +305,7 @@
         </section>
 
         <!-- SLIDE 6: Step 4: Convert Data Files (ProteoWizard) -->
-        <section class="slide" id="slide-6" data-slide-index="6">
+        <section class="slide" id="slide-7" data-slide-index="7">
             <div class="slide-content">
                 <div class="slide-header">
                     <span class="step-badge">Step 4</span>
@@ -308,7 +350,7 @@
         </section>
 
         <!-- SLIDE 7: Wizard (Video) -->
-        <section class="slide video-slide" id="slide-7" data-slide-index="7">
+        <section class="slide video-slide" id="slide-8" data-slide-index="8">
             <div class="slide-content-full">
                 <div class="video-header-card glass thin">
                     <h2 class="slide-title-overlay">MSConvert Installation / Setup Wizard</h2>
@@ -336,7 +378,7 @@
         </section>
 
         <!-- SLIDE 8: Sample File & Parameters (Video) -->
-        <section class="slide video-slide" id="slide-8" data-slide-index="8">
+        <section class="slide video-slide" id="slide-9" data-slide-index="9">
             <div class="slide-content-full">
                 <div class="video-header-card glass thin">
                     <h2 class="slide-title-overlay">Sample File and Parameter Configuration</h2>
@@ -364,7 +406,7 @@
         </section>
 
         <!-- SLIDE 9: Installing PeakMeister and MS convert (Video) -->
-        <section class="slide video-slide" id="slide-9" data-slide-index="9">
+        <section class="slide video-slide" id="slide-10" data-slide-index="10">
             <div class="slide-content-full">
                 <div class="video-header-card glass thin">
                     <h2 class="slide-title-overlay">Installing PeakMeister and MSConvert</h2>
@@ -392,7 +434,7 @@
         </section>
 
         <!-- SLIDE 10: Workflow Flowchart -->
-        <section class="slide" id="slide-10" data-slide-index="10">
+        <section class="slide" id="slide-11" data-slide-index="11">
             <div class="slide-content centered">
                 <div class="slide-header">
                     <h2 class="slide-title">Data Pre-processing Workflow</h2>
@@ -554,7 +596,7 @@
         </section>
 
         <!-- SLIDE 11: Stacked Chromatograms, Interactive Alignment & MTI Formula -->
-        <section class="slide" id="slide-11" data-slide-index="11">
+        <section class="slide" id="slide-12" data-slide-index="12">
             <div class="chromatogram-dashboard">
                 
                 <!-- Left panel: Stacked charts -->
@@ -730,7 +772,7 @@
         </section>
 
         <!-- SLIDE 12: Launching App & Running Real Data (Video) -->
-        <section class="slide video-slide" id="slide-12" data-slide-index="12">
+        <section class="slide video-slide" id="slide-13" data-slide-index="13">
             <div class="slide-content-full">
                 <div class="video-header-card glass thin">
                     <h2 class="slide-title-overlay">Launching the App and Processing Real Data</h2>
@@ -758,7 +800,7 @@
         </section>
 
         <!-- SLIDE 13: Closing slide & Acknowledgements -->
-        <section class="slide" id="slide-13" data-slide-index="13">
+        <section class="slide" id="slide-14" data-slide-index="14">
             <div class="slide-content centered">
                 <div class="closing-badge glass thin">Thank you!</div>
                 <h1 class="hero-title font-smaller">The Britz-McKibbin Laboratory</h1>
@@ -798,7 +840,7 @@
             <!-- Slide Indicators -->
             <div class="hud-progress-container" onclick="openDrawer()">
                 <div class="hud-progress-bar-outer glass thin">
-                    <div class="hud-progress-bar-inner" id="hud-progress" style="width: 6.25%"></div>
+                    <div class="hud-progress-bar-inner" id="hud-progress" style="width: 7.14%"></div>
                 </div>
                 <span class="hud-slide-counter"><span id="current-slide-num">1</span> / 13</span>
             </div>
