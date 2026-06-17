@@ -272,7 +272,7 @@ body.dark-mode .glass.thin:hover, body.dark-mode .glass.ultraThin:hover {
 }
 
 .video-slide .slide-content-full {
-    padding: 5px 0;
+    padding: 5px 0 105px 0;
 }
 
 .video-slide .mac-window, .video-slide .win-window {
@@ -826,6 +826,7 @@ body.dark-mode .qr-container {
     margin-top: 10px;
     margin-bottom: 10px;
     box-shadow: var(--card-shadow);
+    min-height: 0;
 }
 
 .window-title-bar {
@@ -878,13 +879,16 @@ body.dark-mode .mac-window .window-title-bar {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 0;
 }
 
 .slide-video {
     width: 100%;
     height: 100%;
+    max-height: 100%;
     object-fit: contain;
     background-color: #000;
+    min-height: 0;
 }
 
 /* Windows OS Mock Frame */

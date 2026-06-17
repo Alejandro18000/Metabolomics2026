@@ -58,7 +58,7 @@ function showSlide(index) {
     }
     
     // Trigger slide-specific animations or widgets
-    if (currentSlideIndex === 14) {
+    if (currentSlideIndex === 18) {
         if (typeof startFlowchartSimulation === 'function') {
             startFlowchartSimulation();
         }
@@ -68,7 +68,7 @@ function showSlide(index) {
         }
     }
     
-    if (currentSlideIndex === 16) {
+    if (currentSlideIndex === 19) {
         if (typeof startChromatogramScanAnimation === 'function') {
             startChromatogramScanAnimation();
         }
@@ -157,9 +157,12 @@ const slideTitles = [
     "MSConvert Wizard (Video)",
     "Parameter Settings (Video)",
     "Running the App (Video)",
-    "Full Installation (Video)",
+    "Interacting with Interface (Video)",
+    "PeakMeister Outcomes (Video)",
+    "Processing Real Datafile (Video)",
+    "Editing Peak Data (Video)",
+    "Exploring Features (Video)",
     "Pre-processing Workflow",
-    "Running Real Datafile (Video)",
     "Stacked Chromatograms & MTI",
     "Closing & McMaster Lab"
 ];
@@ -308,7 +311,7 @@ function initWorkflowFlowchart() {
     const detailTitle = detailBox.querySelector('.detail-title');
     const detailDuration = detailBox.querySelector('.detail-duration');
     const detailBody = detailBox.querySelector('.detail-body');
-    const flowchartSection = document.getElementById('slide-14');
+    const flowchartSection = document.getElementById('slide-18');
     
     if (!nodes.length || !detailBox || !flowchartSection) return;
     
@@ -570,7 +573,7 @@ function initChromatograms() {
     const chartsPanel = document.querySelector('.charts-panel');
     const hoverLine = document.getElementById('chart-hover-line');
     const tooltip = document.getElementById('chart-hover-tooltip');
-    const slide13 = document.getElementById('slide-16');
+    const slide13 = document.getElementById('slide-19');
     
     if (!chartsPanel || !hoverLine || !tooltip || !slide13) return;
     
@@ -675,7 +678,7 @@ function startChromatogramScanAnimation() {
     const chartsPanel = document.querySelector('.charts-panel');
     const hoverLine = document.getElementById('chart-hover-line');
     const tooltip = document.getElementById('chart-hover-tooltip');
-    const slide11 = document.getElementById('slide-16');
+    const slide11 = document.getElementById('slide-19');
     
     if (!chartsPanel || !hoverLine || !tooltip || !slide11) return;
     
