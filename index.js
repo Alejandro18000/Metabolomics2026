@@ -58,7 +58,7 @@ function showSlide(index) {
     }
     
     // Trigger slide-specific animations or widgets
-    if (currentSlideIndex === 11) {
+    if (currentSlideIndex === 14) {
         if (typeof startFlowchartSimulation === 'function') {
             startFlowchartSimulation();
         }
@@ -68,7 +68,7 @@ function showSlide(index) {
         }
     }
     
-    if (currentSlideIndex === 12) {
+    if (currentSlideIndex === 16) {
         if (typeof startChromatogramScanAnimation === 'function') {
             startChromatogramScanAnimation();
         }
@@ -151,11 +151,15 @@ const slideTitles = [
     "Step 1: Download R & RStudio",
     "Initial Considerations (Video)",
     "Steps 2 & 3: GitHub Setup",
+    "PeakMeister Interface (Video)",
+    "Installing PeakMeister (Video)",
     "Step 4: Convert Data Files",
     "MSConvert Wizard (Video)",
     "Parameter Settings (Video)",
+    "Running the App (Video)",
     "Full Installation (Video)",
     "Pre-processing Workflow",
+    "MassHunter Visualizer",
     "Stacked Chromatograms & MTI",
     "Running Real Datafile (Video)",
     "Closing & McMaster Lab"
@@ -305,7 +309,7 @@ function initWorkflowFlowchart() {
     const detailTitle = detailBox.querySelector('.detail-title');
     const detailDuration = detailBox.querySelector('.detail-duration');
     const detailBody = detailBox.querySelector('.detail-body');
-    const flowchartSection = document.getElementById('slide-11');
+    const flowchartSection = document.getElementById('slide-14');
     
     if (!nodes.length || !detailBox || !flowchartSection) return;
     
@@ -567,7 +571,7 @@ function initChromatograms() {
     const chartsPanel = document.querySelector('.charts-panel');
     const hoverLine = document.getElementById('chart-hover-line');
     const tooltip = document.getElementById('chart-hover-tooltip');
-    const slide13 = document.getElementById('slide-12');
+    const slide13 = document.getElementById('slide-16');
     
     if (!chartsPanel || !hoverLine || !tooltip || !slide13) return;
     
@@ -672,7 +676,7 @@ function startChromatogramScanAnimation() {
     const chartsPanel = document.querySelector('.charts-panel');
     const hoverLine = document.getElementById('chart-hover-line');
     const tooltip = document.getElementById('chart-hover-tooltip');
-    const slide11 = document.getElementById('slide-12');
+    const slide11 = document.getElementById('slide-16');
     
     if (!chartsPanel || !hoverLine || !tooltip || !slide11) return;
     
