@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
     <!-- Main Style Sheet -->
-    <link rel="stylesheet" href="index.css?v=3.0.2">
+    <link rel="stylesheet" href="index.css?v=3.0.3">
 </head>
 <body class="light-mode">
 
@@ -907,76 +907,10 @@
                             </div>
                         </div>
                         
-                        <!-- Interactive calculations values -->
-                        <div class="calculation-values glass thin">
-                            <div class="val-row"><span class="term-met">MT<sub>Met</sub></span> = <span id="val-met">10.36 min</span></div>
-                            <div class="val-row"><span class="term-is1">MT<sub>IS1</sub></span> = <span id="val-is1">9.82 min</span></div>
-                            <div class="val-row"><span class="term-is2">MT<sub>IS2</sub></span> = <span id="val-is2">10.88 min</span></div>
-                            <div class="formula-divider"></div>
-                            <div class="val-row result-row">
-                                <span>MTI =</span>
-                                <span class="result-highlight" id="val-result">0.509</span>
-                            </div>
-                        </div>
+
                     </div>
 
-                    <!-- Workflow status card -->
-                    <div class="workflow-status-card glass regular">
-                        <h4>Workflow Status</h4>
-                        <!-- Mini Timeline Flowchart SVG -->
-                        <svg class="mini-flowchart-svg" viewBox="0 0 240 400" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Background connector line -->
-                            <line x1="25" y1="30" x2="25" y2="360" stroke="var(--border-color-thick)" stroke-width="2" class="mini-flow-line"/>
-                            <!-- Completed path highlight (from Step 1 to Step 4) -->
-                            <line x1="25" y1="30" x2="25" y2="195" stroke="var(--accent-green)" stroke-width="3" class="mini-flow-line-completed"/>
 
-                            <!-- Step 1: Done -->
-                            <g class="mini-node done">
-                                <circle cx="25" cy="30" r="8" class="node-circle done-circle"/>
-                                <path d="M 22 30 L 24 32 L 28 28" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                <text x="45" y="34" class="node-text done-text">1. Convert (.mz5)</text>
-                            </g>
-
-                            <!-- Step 2: Done -->
-                            <g class="mini-node done">
-                                <circle cx="25" cy="85" r="8" class="node-circle done-circle"/>
-                                <path d="M 22 85 L 24 87 L 28 83" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                <text x="45" y="89" class="node-text done-text">2. Parameters</text>
-                            </g>
-
-                            <!-- Step 3: Done -->
-                            <g class="mini-node done">
-                                <circle cx="25" cy="140" r="8" class="node-circle done-circle"/>
-                                <path d="M 22 140 L 24 142 L 28 138" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                <text x="45" y="144" class="node-text done-text">3. Data Analysis</text>
-                            </g>
-
-                            <!-- Step 4: Current -->
-                            <g class="mini-node current">
-                                <circle cx="25" cy="195" r="12" class="node-circle-ring current-ring"/>
-                                <circle cx="25" cy="195" r="7" class="node-circle current-circle"/>
-                                <text x="45" y="199" class="node-text current-text">4. Manual checking</text>
-                            </g>
-
-                            <!-- Step 5: Pending -->
-                            <g class="mini-node pending">
-                                <circle cx="25" cy="250" r="6" class="node-circle pending-circle"/>
-                                <text x="45" y="254" class="node-text pending-text">5. Downstream</text>
-                            </g>
-
-                            <!-- Step 6: Pending -->
-                            <g class="mini-node pending">
-                                <circle cx="25" cy="305" r="6" class="node-circle pending-circle"/>
-                                <text x="45" y="309" class="node-text pending-text">6. Data Review</text>
-                            </g>
-
-                            <!-- Step 7: Pending -->
-                            <g class="mini-node pending">
-                                <circle cx="25" cy="360" r="6" class="node-circle pending-circle"/>
-                                <text x="45" y="364" class="node-text pending-text">7. Data export</text>
-                            </g>
-                        </svg>
-                    </div>
                 </div>
             </div>
             
@@ -1058,6 +992,6 @@
     </div>
 
     <!-- Main Controller Script -->
-    <script src="index.js?v=3.0.2"></script>
+    <script src="index.js?v=3.0.3"></script>
 </body>
 </html>

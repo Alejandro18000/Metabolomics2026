@@ -681,19 +681,22 @@ function selectSegment(id) {
     const segment = msiSegments.find(s => s.id === id);
     if (!segment) return;
     
-    document.getElementById('val-met').textContent = `${segment.met.toFixed(2)} min`;
-    document.getElementById('val-is1').textContent = `${segment.is1.toFixed(2)} min`;
-    document.getElementById('val-is2').textContent = `${segment.is2.toFixed(2)} min`;
+    // Update elements dynamically only if they exist in the DOM
+    const elMet = document.getElementById('val-met');
+    const elIs1 = document.getElementById('val-is1');
+    const elIs2 = document.getElementById('val-is2');
+    const elResult = document.getElementById('val-result');
+    
+    if (elMet) elMet.textContent = `${segment.met.toFixed(2)} min`;
+    if (elIs1) elIs1.textContent = `${segment.is1.toFixed(2)} min`;
+    if (elIs2) elIs2.textContent = `${segment.is2.toFixed(2)} min`;
     
     // Compute MTI: (MT_Met - MT_IS1) / (MT_IS1 - MT_IS2)
-    // Wait, let's verify denominator logic in CE-MS:
-    // MTI = (MT_Metabolite - MT_IS1) / (MT_IS1 - MT_IS2) or similar.
-    // Let's compute based on the formula written:
     const num = segment.met - segment.is1;
     const den = segment.is1 - segment.is2;
     const mti = num / den;
     
-    document.getElementById('val-result').textContent = mti.toFixed(4);
+    if (elResult) elResult.textContent = mti.toFixed(4);
 }
 
 function startChromatogramScanAnimation() {
