@@ -189,8 +189,7 @@ const slideTitles = [
     "Pre-processing Workflow",
     "Stacked Chromatograms & MTI",
     "Acknowledgements",
-    "Feedback",
-    "Closing & McMaster Lab"
+    "Feedback & Closing"
 ];
 
 function buildDrawerMenu() {
