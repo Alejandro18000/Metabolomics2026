@@ -172,12 +172,12 @@ const slideTitles = [
     "Pre-processing Intro",
     "Mentimeter Activity",
     "PeakMeister App",
-    "Step 1: Download R & RStudio",
+    "Download R & RStudio",
     "Initial Considerations (Video)",
-    "Steps 2 & 3: GitHub Setup",
-    "PeakMeister Interface (Video)",
+    "GitHub Setup",
+    "PeakMeister 2.0 Software",
     "Installing PeakMeister (Video)",
-    "Step 4: Convert Data Files",
+    "Convert Data Files",
     "MSConvert Wizard (Video)",
     "Parameter Settings (Video)",
     "Running the App (Video)",
@@ -188,6 +188,8 @@ const slideTitles = [
     "Exploring Features (Video)",
     "Pre-processing Workflow",
     "Stacked Chromatograms & MTI",
+    "Acknowledgements",
+    "Feedback",
     "Closing & McMaster Lab"
 ];
 
