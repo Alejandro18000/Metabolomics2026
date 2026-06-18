@@ -2388,8 +2388,8 @@ body.dark-mode .drawer-item.active-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px;
-    border-radius: 50%;
+    padding: 6px;
+    border-radius: 12px;
     background: var(--card-bg-thick);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -2400,9 +2400,9 @@ body.dark-mode .drawer-item.active-item {
 }
 
 .floating-brand-logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 60px;
+    height: 48px;
+    border-radius: 8px;
     object-fit: cover;
     border: 1.5px solid var(--border-color-thin);
 }
